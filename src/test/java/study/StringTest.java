@@ -22,4 +22,12 @@ public class StringTest {
         String[] actual = "1".split(",");
         assertThat(actual).containsExactly("1");
     }
+
+    @Test
+    void substring_parentheses()    {
+        String actual = "(1,2)".substring(1, 4);
+        assertThat(actual).isEqualTo("1,2");
+    }
+
+
 }
